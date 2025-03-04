@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>|GAMMA corporation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Agregar Font Awesome -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+        }
+        .banner {
+            background-color: #5a3c1d;
+            color: #f5deb3;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .logo img {
+            width: 80px;
+            border-radius: 50%;
+        }
+        .logo h1 {
+            margin-left: 10px;
+            font-size: 24px;
+        }
+        .search-bar {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .search-bar input {
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            width: 250px;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: #2e1e14;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+            margin-top: 100px; /* Separa más el menú del banner */
+        }
+        .menu a {
+            text-decoration: none;
+            color: white;
+            background-color: #8b5a2b;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+        .menu a:hover {
+            background-color: #a06d3d;
+        }
+        .content {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .main-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+        /* Estilos para el carrusel */
+        .carousel-container {
+            width: 80%;
+            margin: 30px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+            flex: 0 0 100%; /* Muestra solo una imagen a la vez */
+        }
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-nav button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 50%;
+        }
+        .carousel-nav button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .social-media {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px 0;
+            background-color: #2e1e14;
+        }
+        .social-media a {
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        .social-media a:hover {
+            color: #a06d3d;
+        }
+        .register-btn {
+            display: inline-block;
+            background-color: #8b5a2b;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            margin-top: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .register-btn:hover {
+            background-color: #a06d3d;
+        }
+    </style>
+</head>
+<body>
+    <header class="banner">
+        <div class="logo" onclick="window.location.href='index.html';">
+            <img src="logo.png" alt="Gamma Corporation">
+            <h1>GAMMA <br> <small>corporation</small></h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+        </div>
+    </header>
+    <nav class="menu">
+        <a href="file:///C:/Users/narob/OneDrive/Desktop/GAMMA%20corporation/quienes%20somos%20gamma.html">¿Quiénes somos?</a>
+        <a href="file:///C:/Users/narob/OneDrive/Desktop/GAMMA%20corporation/avances%20GAMMA.html">Avances</a>
+        <a href="file:///C:/Users/narob/OneDrive/Desktop/GAMMA%20corporation/REGISTRO.html">Trámites</a>
+        <a href="file:///C:/Users/narob/OneDrive/Desktop/GAMMA%20corporation/donaciones%20GAMMA.html">Donaciones</a>
+        <a href="file:///C:/Users/narob/OneDrive/Desktop/GAMMA%20corporation/productos%20gamma.html">Productos</a>
+        <a href="file:///C:/Users/narob/OneDrive/Desktop/GAMMA%20corporation/contactanos.html">Contactos</a>
+        <a href="file:///C:/Users/narob/OneDrive/Desktop/GAMMA%20corporation/Visitanos.html">Ubicación</a>
+    </nav>
+    <div class="content">
+        <img src="gamma lema.jpg" alt="Gamma Lema" class="main-image">
+    </div>
+    <div class="carousel-container">
+        <div class="carousel">
+            <img src="21.png" alt="Imagen 1">
+            <img src="22.png" alt="Imagen 2">
+            <img src="23.png" alt="Imagen 3">
+            <img src="24.png" alt="Imagen 4">
+            <img src="25.png" alt="Imagen 5">
+            <img src="26.png" alt="Imagen 6">
+            <img src="27.png" alt="Imagen 7">
+        </div>
+        <div class="carousel-nav">
+            <button id="prev-btn">&#10094;</button>
+            <button id="next-btn">&#10095;</button>
+        </div>
+<div class="video-container">
+    <h2>Presentación |GAMMA corporation</h2>
+    <video controls>
+        <source src="GAMMA corporation.mp4" type="video/mp4">
+        Tu navegador no soporta la reproducción de video.
+    </video>
+</div>
+
+<style>
+    .video-container {
+        text-align: center;
+        margin: 20px auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        max-width: 800px;
+    }
+
+    h2 {
+        color: #f5deb3;
+    }
+
+    video {
+        width: 100%;
+        max-width: 720px;
+        border-radius: 10px;
+    }
+</style>
+
+       <div class="social-media">
+        <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook"></a>
+        <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram"></a>
+        <a href="https://www.tiktok.com" target="_blank" class="fab fa-tiktok"></a>
+        <a href="https://www.linkedin.com" target="_blank" class="fab fa-linkedin"></a>
+        <a href="https://www.youtube.com" target="_blank" class="fab fa-youtube"></a>
+    </div>
+    <script>
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const carousel = document.querySelector('.carousel');
+        let index = 0;
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+        prevBtn.addEventListener('click', () => {
+            index = index > 0 ? index - 1 : carousel.children.length - 1;
+            updateCarousel();
+        });
+        nextBtn.addEventListener('click', () => {
+            index = index < carousel.children.length - 1 ? index + 1 : 0;
+            updateCarousel();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donaciones - Gamma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+        }
+        .banner {
+            background-color: #5a3c1d;
+            color: #f5deb3;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 80px;
+            border-radius: 50%;
+        }
+        .logo h1 {
+            margin-left: 10px;
+            font-size: 24px;
+        }
+        .content {
+            margin-top: 120px;
+            padding: 20px;
+            font-size: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .carousel-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 30px auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            background-color: #333;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+            flex-shrink: 0;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-nav button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        .carousel-nav button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .donation-table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background-color: #222;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .donation-table th, .donation-table td {
+            padding: 15px;
+            border: 1px solid #666;
+        }
+        .donation-table th {
+            background-color: #5a3c1d;
+            color: #f5deb3;
+        }
+        .donation-table td a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .donation-table td a:hover {
+            text-decoration: underline;
+        }
+ .social-links {
+            margin-top: 30px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: white;
+            font-size: 30px;
+            transition: color 0.3s ease-in-out;
+        }
+        .social-links a:hover {
+            color: #f5deb3;
+}
+    </style>
+</head>
+<body>
+    <header class="banner">
+<div class="logo" onclick="window.location.href='file:///C:/Users/narob/OneDrive/Desktop/GAMMA%20corporation/GAMMA%20corporation%20oficial.html';">
+        <div class="logo">
+            <img src="logo.png" alt="Gamma Corporation">
+            <h1>Avances Gamma</h1>
+        </div>
+    </header>
+
+    <div class="content">
+        <p>BIENVENID@ AL ESPACIO DE DONACIONES</p>
+        <p>Gracias por visitar nuestro sitio y por interesarte en marcar una diferencia en el mundo...</p>
+    </div>
+
+    <div class="carousel-container">
+        <div class="carousel" id="carousel">
+            <img src="41.png" alt="Imagen 1">
+            <img src="42.png" alt="Imagen 2">
+            <img src="43.png" alt="Imagen 3">
+            <img src="44.png" alt="Imagen 4">
+            <img src="45.png" alt="Imagen 5">
+            <img src="46.png" alt="Imagen 6">
+        </div>
+        <div class="carousel-nav">
+            <button id="prev-btn">&#10094;</button>
+            <button id="next-btn">&#10095;</button>
+        </div>
+    </div>
+
+    <table class="donation-table">
+        <tr>
+            <th>Banco</th>
+            <th>Acceso</th>
+        </tr>
+        <tr>
+            <td>BBVA</td>
+            <td><a href="https://www.bbva.mx/" target="_blank">Ir a BBVA</a></td>
+        </tr>
+        <tr>
+            <td>Banorte</td>
+            <td><a href="https://www.banorte.com/" target="_blank">Ir a Banorte</a></td>
+        </tr>
+        <tr>
+            <td>Santander</td>
+            <td><a href="https://www.santander.com.mx/" target="_blank">Ir a Santander</a></td>
+        </tr>
+        <tr>
+            <td>HSBC</td>
+            <td><a href="https://www.hsbc.com.mx/" target="_blank">Ir a HSBC</a></td>
+        </tr>
+    </table>
+
+    <script>
+        let index = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const total = images.length;
+
+        document.getElementById('next-btn').addEventListener('click', () => {
+            index = (index + 1) % total;
+            document.querySelector('.carousel').style.transform = `translateX(-${index * 100}%)`;
+        });
+
+        document.getElementById('prev-btn').addEventListener('click', () => {
+            index = (index - 1 + total) % total;
+            document.querySelector('.carousel').style.transform = `translateX(-${index * 100}%)`;
+        });
+    </script>
+<div class="social-links">
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+</body>
+</html>
